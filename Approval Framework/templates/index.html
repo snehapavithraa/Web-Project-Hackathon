@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approval Framework</title>
+</head>
+<body>
+    <h1>Approval Framework</h1>
+
+    <!-- Form to create an approval request -->
+    <form id="approvalForm">
+        <label for="header">Header:</label>
+        <input type="text" id="header" required><br>
+
+        <label for="value">Value:</label>
+        <input type="number" id="value" required><br>
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" required><br>
+
+        <button type="button" onclick="createApproval()">Submit Approval Request</button>
+    </form>
+
+    <!-- Display approval status -->
+    <div id="approvalStatus"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
